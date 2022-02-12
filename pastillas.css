@@ -184,6 +184,7 @@ p {
 
 .nav-header .div-header ul {
     width: 100%;
+    margin: 0;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: nowrap;
@@ -270,22 +271,23 @@ p {
     }
 }
 
-.text-carrousel p {
+.text-carousel p {    
     font-family: 'nunito';
     color: var(--color-text);
     font-size: var(--size-text);
     text-align: var(--aling-text);
     width: 90%;
-    padding: 30px;
+    margin: 0%;
     text-align: justify;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: nowrap;
 }
 
-.text-carrousel p a {
+.text-carousel a {
+    font-family: 'nunito';
+    font-size: var(--size-text);
     color: rgb(183, 0, 255);
+    text-decoration: none;
+    display: flex;
+    align-items: flex-start;
 }
 
 .music-index {
