@@ -1,0 +1,750 @@
+* {
+    margin: 0; 
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'clarendon-bold';
+    src: url('fonts/Clarendon-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('fonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('fonts/Nunito-VariableFont_wght.ttf');
+}
+
+:root {
+        
+    /* TITULOS */
+    --size-title: 50px;
+    --color-title: white;
+    --text-aling-title: center;
+
+    /* SUB TITULOS */
+    --size-subtitle: 35px;
+    --color-subtitle: white;
+    --text-aling-subtitle: left;
+    --margin-subtitle: 15px;
+    --padding-subtitle: 15px;
+
+    /* IMAGEN HEADER */
+    --width-img-header: 100%;
+    --height-img-header: auto;
+
+    /* TEXTOS */
+    --color-text: rgb(172, 172, 172);
+    --size-text: 18px;
+    --aling-text: justify;
+    --margin-text: 15px;
+    --padding-text: 5px;
+}
+
+
+/* Estilo Body */
+
+body {
+    background-color: rgb(0, 5, 14);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.h1-index {
+    font-family: 'clarendon-bold';
+    text-align: var(--text-aling-title);
+    font-size: 60px;
+    color: var(--color-title);
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+    .h1-index {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1100px) {
+    .h1-index {
+        font-size: 40px;
+    }
+}
+
+
+h2 {
+    font-family: 'lato';
+    text-align: var(--text-aling-subtitle);
+    font-size: var(--size-subtitle);
+    color: var(--color-subtitle);
+    margin-left: var(--margin-subtitle);
+    padding: var(--padding-subtitle);
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1100px) {
+    h2 {
+        font-size: 30px;
+    }
+}
+
+p {
+    font-family: 'nunito';
+    color: var(--color-text);
+    font-size: var(--size-text);
+    text-align: var(--aling-text);
+    margin: var(--margin-text);
+    padding: var(--padding-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flecha {
+    border: 1px solid rgb(172, 172, 172);
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 90%;
+    left: 92%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+/* Fin estilo Body */
+
+
+/* Estilos Header */
+
+#header {
+    width: 100%;
+}
+
+.nav-header {
+    width: 100%;
+    background-color: rgb(0, 9, 27);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-header .div-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+    .logo-inicio {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 980px) {
+    .logo-inicio {
+        width: 75%;
+        height: auto;
+    }
+}
+
+.nav-header .div-header a {
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(172, 172, 172);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+    .nav-header .div-header a {
+        font-size: 10px;
+    } 
+}
+
+@media screen and (min-width: 481px) and (max-width: 980px) {
+    .nav-header .div-header a {
+        font-size: 15px;
+    } 
+}
+
+.nav-header .div-header ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+    .nav-header .div-header ul {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+    } 
+}
+
+@media screen and (min-width: 481px) and (max-width: 980px) {
+    .nav-header .div-header ul{
+        display: flex;
+        justify-content: space-evenly; 
+        flex-direction: row;       
+    } 
+}
+
+@media screen and (min-width: 981px) {
+    .nav-header .div-header ul{
+        width: 100%;
+    } 
+}
+
+.nav-header .div-header ul .li-header {
+    display: inline-block;
+}
+
+.img-header {
+    width: 100%;
+    height: var(--height-img-header);
+    border-top: 4px solid rgb(172, 172, 172);
+    border-bottom: 4px solid rgb(172, 172, 172);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* Fin estilos header*/
+
+
+/* Estilos Index */
+
+.section-carrousel {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    flex-wrap: nowrap;
+}
+
+.carrousel img{
+    width: 100%;
+    height: auto;
+    margin-left: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+    .carrousel img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 980px) {
+    .carrousel img {
+        width: 75%;
+        height: auto;
+    }
+}
+
+.text-carrousel p {
+    font-family: 'nunito';
+    color: var(--color-text);
+    font-size: var(--size-text);
+    text-align: var(--aling-text);
+    width: 90%;
+    padding: 30px;
+    text-align: justify;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.text-carrousel p a {
+    color: rgb(183, 0, 255);
+}
+
+.music-index {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+/* Fin estilos Index*/
+
+
+/* Estilo La Banda */
+
+.section-banda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+    .section-banda {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 95% 5%;
+    }
+
+    .section-banda p {
+        width: 96%;
+        text-align: justify;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .section-banda-img {
+        grid-area: 2 / 1 / 3 / 2;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .section-banda-img ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .section-banda-img ul li img {
+        width: 75%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 980px) {
+    .section-banda {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 90% 10%;
+    }
+
+    .section-banda p {
+        width: 96%;
+        text-align: justify;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .section-banda-img {
+        grid-area: 2 / 1 / 3 / 2;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .section-banda-img ul {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .section-banda-img ul li img {
+        width: 75%;
+        height: auto;
+    }
+}
+
+.banda-image {
+    width: 400px;
+    height: auto;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.section-banda p {
+    width: 90%;
+    margin-left: 10px;
+    text-align: justify;
+}
+
+.integrantes {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.integrantes-container {
+    width: 100%;
+}
+
+
+.integrantes-container ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.integrantes-container ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.image-integrantes {
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+}
+
+.image-integrantes p {
+    width: 100%;
+    font-family: 'nunito';
+    color: var(--color-text);
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+    .integrantes {
+        width: 100%;
+    }
+
+    .integrantes-container ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .integrantes-container ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 980px) {
+    .integrantes {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .integrantes-container ul {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .integrantes-container ul li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    }
+
+    .integrantes-container ul li img {
+        padding-left: 20px;
+    }
+}
+
+/* Fin estilo La Banda */
+
+
+/* Estilo discografia */
+
+
+.nav-discography ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.li-discography-cd {
+    display: inline-block;
+    flex-wrap: wrap;
+}
+
+.li-discography-cd a {
+    display: flex;
+    justify-content: center;
+}
+
+.discography-cd {
+    width: 250px;
+    height: auto;
+    margin: 30px;
+    padding: 15px;
+}
+
+.name-cd div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.name-cd h2 {
+    font-family: 'lato';
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+.name-cd div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-cd div img {
+    width: 400px;
+    height: 400px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.name-cd div iframe {
+    width: 600px;
+    height: 400px;
+    margin-top: 30px;
+    margin-right: 100px;
+}
+
+.song-cd div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.song-list {
+    font-family: 'nunito';
+    color: white;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.name-song {
+    font-family: 'nunito';
+    color: white;
+    font-size: var(--size-text);
+    text-align: left;
+    width: 400px;
+    margin-right: 300px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    padding-right: 20px;
+}
+
+.name-song li {
+    padding-top: 4px;
+}
+
+.song-cd div iframe {
+    width: 800px;
+    height: 400px;
+    margin-right: 100px; 
+}
+
+.song-cd div video {
+    width: 600px;
+    height: 400px;
+    margin-right: 100px;
+    padding-bottom: 30px;
+}
+
+/* Fin estilo discografia*/
+
+
+/*Estilos fechas */
+
+.article-fechas1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr) ;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.fechas1-img {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.fechas1-img2 {
+    width: 80%;
+    height: auto;
+    margin: 20px;
+    grid-area: 1 / 2 / 3 / 3;
+}
+
+.fechas1-img2 h6 {
+    text-align: center;
+    font-family: 'nunito';
+    color: white;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+
+.fechas-information {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.fechas-information ul li img  {
+    width: 24px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.fechas-information ul li a {
+    text-decoration: none;
+}
+
+.fechas-information ul li strong {
+    font-family: 'nunito';
+    font-size: 18px;
+    color: white;
+}
+
+.fechas-information iframe {
+    width: 20%;
+    height: auto;
+    margin: 20px;
+}
+
+.article-fechas2 h3 {
+    font-family: 'lato';
+    font-size: 28px;
+    color: white;
+    margin-left: 20px;
+}
+
+.article-fechas2 p {
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.fechas-proximas {
+    width: 100%;
+    font-family: 'nunito';
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    margin: 30px;
+    border: 1px solid white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+/*Fin estilo fechas*/
+
+
+/* Estilo Footer */
+
+footer {
+    width: 100%;
+    background-color: rgb(0, 9, 27);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+footer .image-footer a {
+    text-decoration: none;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.image-footer {  
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+@media screen and (max-width: 480px) {
+    .image-footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 980px) {
+    .image-footer {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+footer p {
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(172, 172, 172);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+    footer p {
+        width: 90%;
+        height: auto;
+        text-align: center;
+    }
+}
+
+/* Fin estilo Footer */
