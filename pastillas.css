@@ -213,6 +213,11 @@ p {
 
 .nav-header .div-header ul .li-header {
     display: inline-block;
+    transition: all 1.25s;
+}
+
+.li-header:hover {
+    transform: scale(1.25);
 }
 
 .img-header {
@@ -511,6 +516,11 @@ p {
     height: auto;
     margin: 30px;
     padding: 15px;
+    transition: all 1.25s;
+}
+
+.discography-cd:hover {
+    transform: scale(1.25);
 }
 
 .name-cd div {
@@ -727,6 +737,14 @@ footer .image-footer a {
         align-items: center;
         flex-direction: row;
     }
+}
+
+.image-footer-redes {
+    transition: all 1.25s;
+}
+
+.image-footer-redes:hover {
+    transform: scale(1.25);
 }
 
 footer p {
