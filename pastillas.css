@@ -182,67 +182,62 @@ p {
 
 /* Estilos Index */
 
-.section-carrousel {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    flex-wrap: nowrap;
-}
-
-.carrousel img{
-    width: 100%;
-    height: auto;
-    margin-left: 10px;
-    padding: 5px;
+.contenedor-carousel {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 
-@media screen and (max-width: 480px) {
-    .carrousel img {
-        width: 50%;
-        height: auto;
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 980px) {
-    .carrousel img {
-        width: 75%;
-        height: auto;
-    }
-}
-
-.text-carousel p {    
-    font-family: 'nunito';
-    color: var(--color-text);
-    font-size: var(--size-text);
-    text-align: var(--aling-text);
-    width: 90%;
-    margin: 0%;
-    text-align: justify;
-}
-
-.text-carousel a {
-    font-family: 'nunito';
-    font-size: var(--size-text);
-    color: rgb(183, 0, 255);
-    text-decoration: none;
-    display: flex;
-    align-items: flex-start;
+.music-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .music-index {
-    width: 100%;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100%;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    margin: 20px 0;
+}
+
+.h2-music {
+    width: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+}
+
+.spotify-index {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
     
+}
+
+.spotify {
+    transition: all 1.25s;
+}
+
+.spotify:hover {
+    transform: scale(1.10);
+}
+
+.discografia-index {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+.discografia-index img {
+    width: auto;
+    height: auto;
+    transition: all 1.25s;
+}
+
+.discografia-index img:hover {
+    transform: scale(1.10);
 }
 
 /* Fin estilos Index*/
@@ -329,6 +324,10 @@ p {
     }
 }
 
+.section-banda-img ul {
+    list-style: none;
+}
+
 .banda-image {
     width: 400px;
     height: auto;
@@ -378,16 +377,19 @@ p {
     margin-top: 30px;
 }
 
-.image-integrantes p {
+.integrantes-container a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.integrantes-container a p {
     width: 100%;
     font-family: 'nunito';
     color: var(--color-text);
     font-size: 15px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: nowrap;
 }
 
 @media screen and (max-width: 480px) {
@@ -427,9 +429,12 @@ p {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    list-style: none;
     }
 
     .integrantes-container ul li img {
+        width: auto;
+        height: auto;
         padding-left: 20px;
     }
 }
@@ -470,81 +475,69 @@ p {
     transform: scale(1.25);
 }
 
-.name-cd div {
+.container-cd {
     display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-
-.name-cd h2 {
-    font-family: 'lato';
-    margin-top: 60px;
-    margin-left: 20px;
-}
-
-.name-cd div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.name-cd div img {
-    width: 400px;
-    height: 400px;
-    margin-top: 30px;
+    flex-wrap: nowrap;
+    margin-top: 40px;
     margin-bottom: 20px;
-    margin-left: 20px;
 }
 
-.name-cd div iframe {
-    width: 600px;
-    height: 400px;
-    margin-top: 30px;
-    margin-right: 100px;
-}
-
-.song-cd div {
+h2 {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+    font-family: 'lato';
 }
 
-.song-list {
+.tapa-cd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tapa-cd img {
+    width: 70%;
+    height: auto;
+}
+
+.spotify-cd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h3-discografia {
     font-family: 'nunito';
     color: white;
     font-size: 20px;
-    margin-top: 30px;
-    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.name-song {
+.nombre-temas {
     font-family: 'nunito';
     color: white;
     font-size: var(--size-text);
-    text-align: left;
-    width: 400px;
-    margin-right: 300px;
-    margin-bottom: 30px;
-    margin-left: 40px;
-    padding-right: 20px;
+    margin-left: 80px;
 }
 
-.name-song li {
-    padding-top: 4px;
+.nombre-temas li {
+    margin-top: 3px;
 }
 
-.song-cd div iframe {
-    width: 800px;
-    height: 400px;
-    margin-right: 100px; 
+.video-discografia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.song-cd div video {
-    width: 600px;
-    height: 400px;
-    margin-right: 100px;
-    padding-bottom: 30px;
+.video-discografia video {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid white;
 }
 
 /* Fin estilo discografia*/
