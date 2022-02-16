@@ -182,67 +182,62 @@ p {
 
 /* Estilos Index */
 
-.section-carrousel {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    flex-wrap: nowrap;
-}
-
-.carrousel img{
-    width: 100%;
-    height: auto;
-    margin-left: 10px;
-    padding: 5px;
+.contenedor-carousel {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 
-@media screen and (max-width: 480px) {
-    .carrousel img {
-        width: 50%;
-        height: auto;
-    }
-}
-
-@media screen and (min-width: 481px) and (max-width: 980px) {
-    .carrousel img {
-        width: 75%;
-        height: auto;
-    }
-}
-
-.text-carousel p {    
-    font-family: 'nunito';
-    color: var(--color-text);
-    font-size: var(--size-text);
-    text-align: var(--aling-text);
-    width: 90%;
-    margin: 0%;
-    text-align: justify;
-}
-
-.text-carousel a {
-    font-family: 'nunito';
-    font-size: var(--size-text);
-    color: rgb(183, 0, 255);
-    text-decoration: none;
-    display: flex;
-    align-items: flex-start;
+.music-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .music-index {
-    width: 100%;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100%;
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    margin: 20px 0;
+}
+
+.h2-music {
+    width: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+}
+
+.spotify-index {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
     
+}
+
+.spotify {
+    transition: all 1.25s;
+}
+
+.spotify:hover {
+    transform: scale(1.10);
+}
+
+.discografia-index {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+.discografia-index img {
+    width: auto;
+    height: auto;
+    transition: all 1.25s;
+}
+
+.discografia-index img:hover {
+    transform: scale(1.10);
 }
 
 /* Fin estilos Index*/
@@ -329,6 +324,10 @@ p {
     }
 }
 
+.section-banda-img ul {
+    list-style: none;
+}
+
 .banda-image {
     width: 400px;
     height: auto;
@@ -378,16 +377,19 @@ p {
     margin-top: 30px;
 }
 
-.image-integrantes p {
+.integrantes-container a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.integrantes-container a p {
     width: 100%;
     font-family: 'nunito';
     color: var(--color-text);
     font-size: 15px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: nowrap;
 }
 
 @media screen and (max-width: 480px) {
@@ -427,9 +429,12 @@ p {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    list-style: none;
     }
 
     .integrantes-container ul li img {
+        width: auto;
+        height: auto;
         padding-left: 20px;
     }
 }
