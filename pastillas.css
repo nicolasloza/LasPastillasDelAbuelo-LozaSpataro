@@ -475,81 +475,69 @@ p {
     transform: scale(1.25);
 }
 
-.name-cd div {
+.container-cd {
     display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-
-.name-cd h2 {
-    font-family: 'lato';
-    margin-top: 60px;
-    margin-left: 20px;
-}
-
-.name-cd div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.name-cd div img {
-    width: 400px;
-    height: 400px;
-    margin-top: 30px;
+    flex-wrap: nowrap;
+    margin-top: 40px;
     margin-bottom: 20px;
-    margin-left: 20px;
 }
 
-.name-cd div iframe {
-    width: 600px;
-    height: 400px;
-    margin-top: 30px;
-    margin-right: 100px;
-}
-
-.song-cd div {
+h2 {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
+    justify-content: center;
+    margin: 30px;
+    font-family: 'lato';
 }
 
-.song-list {
+.tapa-cd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tapa-cd img {
+    width: 70%;
+    height: auto;
+}
+
+.spotify-cd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h3-discografia {
     font-family: 'nunito';
     color: white;
     font-size: 20px;
-    margin-top: 30px;
-    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    display: flex;
+    justify-content: flex-start;
 }
 
-.name-song {
+.nombre-temas {
     font-family: 'nunito';
     color: white;
     font-size: var(--size-text);
-    text-align: left;
-    width: 400px;
-    margin-right: 300px;
-    margin-bottom: 30px;
-    margin-left: 40px;
-    padding-right: 20px;
+    margin-left: 80px;
 }
 
-.name-song li {
-    padding-top: 4px;
+.nombre-temas li {
+    margin-top: 3px;
 }
 
-.song-cd div iframe {
-    width: 800px;
-    height: 400px;
-    margin-right: 100px; 
+.video-discografia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.song-cd div video {
-    width: 600px;
-    height: 400px;
-    margin-right: 100px;
-    padding-bottom: 30px;
+.video-discografia video {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid white;
 }
 
 /* Fin estilo discografia*/
