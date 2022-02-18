@@ -114,16 +114,6 @@ p {
     flex-wrap: wrap;
 }
 
-.flecha {
-    border: 1px solid rgb(172, 172, 172);
-    width: 60px;
-    height: 60px;
-    position: fixed;
-    top: 90%;
-    left: 92%;
-    display: flex;
-    flex-wrap: nowrap;
-}
 /* Fin estilo Body */
 
 
@@ -187,58 +177,82 @@ p {
     align-items: center;
 }
 
-.music-container {
+.musica-container {
     margin-top: 40px;
     margin-bottom: 40px;
 }
 
-.music-index {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: 100%;
-    grid-column-gap: 10px;
-    grid-row-gap: 0px;
-    margin: 20px 0;
-}
-
-.h2-music {
-    width: auto;
+.banner-musica {
+    width: 100%;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.banner-musica img {
     display: flex;
     justify-content: center;
 }
 
 .spotify-index {
-    grid-area: 1 / 1 / 2 / 2;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     
 }
 
-.spotify {
+.spotify-index {
     transition: all 1.25s;
 }
 
-.spotify:hover {
+.spotify-index:hover {
     transform: scale(1.10);
 }
 
 .discografia-index {
-    grid-area: 1 / 2 / 2 / 3;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: flex;
     justify-content: center;
+    transition: all 1.25s;
+}
+
+.discografia-index:hover {
+    transform: scale(1.10);
 }
 
 .discografia-index img {
     width: auto;
     height: auto;
-    transition: all 1.25s;
+    border-radius: 12px;
 }
 
-.discografia-index img:hover {
-    transform: scale(1.10);
+/* INICIO MUSICA PARA MOBILE*/
+@media screen and (max-width: 769px) {
+    .banner-musica {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    .discografia-index {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .discografia-index a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .discografia-index img {
+        width: 75%;
+        height: auto;
+        border-radius: 12px;
+    }
 }
+
+/* FIN MUSICA PARA MOBILE*/
 
 /* Fin estilos Index*/
 
@@ -635,16 +649,14 @@ h2 {
 /* Estilo Footer */
 
 footer {
-    width: 100%;
-    background-color: rgb(0, 9, 27);
+    width: auto;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-rows: repeat(2, 50%);
 }
 
-footer .image-footer a {
+.image-footer a {
     text-decoration: none;
     padding-top: 15px;
     padding-right: 10px;
