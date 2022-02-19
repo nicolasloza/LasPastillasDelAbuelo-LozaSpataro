@@ -139,6 +139,7 @@ p {
     padding: 0 30px;
 }
 
+/* INICIO ANIMACIONES EN FOOTER PARA DESKTOP */
 @media screen and (min-width: 992px) {
     .li-header {
         transition: all 1.25s;
@@ -148,6 +149,7 @@ p {
         transform: scale(1.25);
     }   
 }
+/* FIN ANIMACIONES EN FOOTER PARA DESKTOP */
 
 .li-header a {
     font-family: 'Nunito Sans', sans-serif;
@@ -256,7 +258,6 @@ p {
         border-radius: 12px;
     }
 }
-
 /* FIN MUSICA PARA MOBILE*/
 
 /* Fin estilos Index*/
@@ -696,12 +697,14 @@ footer {
     }
 }
 
-.image-footer-redes {
-    transition: all 1.25s;
-}
-
-.image-footer-redes:hover {
-    transform: scale(1.25);
+@media screen and (min-width: 992px) {
+    .image-footer-redes {
+        transition: all 1.25s;
+    }
+    
+    .image-footer-redes:hover {
+        transform: scale(1.25);
+    }   
 }
 
 footer p {
