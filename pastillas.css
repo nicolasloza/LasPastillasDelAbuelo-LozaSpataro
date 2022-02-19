@@ -69,7 +69,7 @@ body {
 
 @media screen and (max-width: 480px) {
     .h1-index {
-        font-size: 22px;
+        font-size: 30px;
     }
 }
 
@@ -91,13 +91,13 @@ h2 {
 
 @media screen and (max-width: 480px) {
     h2 {
-        font-size: 20px;
+        font-size: 28px;
     }
 }
 
 @media screen and (min-width: 481px) and (max-width: 1100px) {
     h2 {
-        font-size: 30px;
+        font-size: 35px;
     }
 }
 
@@ -137,19 +137,12 @@ p {
 
 .li-header {
     padding: 0 30px;
+    transition: all 1.25s;
 }
 
-/* INICIO ANIMACIONES EN FOOTER PARA DESKTOP */
-@media screen and (min-width: 992px) {
-    .li-header {
-        transition: all 1.25s;
-    }
-    
-    .li-header:hover {
-        transform: scale(1.25);
-    }   
+.li-header:hover {
+    transform: scale(1.25);
 }
-/* FIN ANIMACIONES EN FOOTER PARA DESKTOP */
 
 .li-header a {
     font-family: 'Nunito Sans', sans-serif;
@@ -258,6 +251,7 @@ p {
         border-radius: 12px;
     }
 }
+
 /* FIN MUSICA PARA MOBILE*/
 
 /* Fin estilos Index*/
@@ -309,98 +303,124 @@ p {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .integrantes-container {
     width: 100%;
 }
 
-
 .integrantes-container ul {
     width: 100%;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-
 .integrantes-container ul li {
+    list-style: none;
+}
+
+.integrantes-container ul li img {
     width: 100%;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+}
 
+.nombre-integrantes {
+    margin-top: 15px;
+    padding: 0%;
 }
 
 .image-integrantes {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
     margin-top: 30px;
 }
 
-.integrantes-container a {
+.integrantes-container ul {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.integrantes-container ul li a {
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
-.integrantes-container a p {
+.integrantes-container ul li a p {
     width: 100%;
     font-family: 'nunito';
     color: var(--color-text);
     font-size: 15px;
 }
 
+/* INICIO SECCION INTEGRANTES PARA MOBILE*/
 @media screen and (max-width: 480px) {
     .integrantes {
         width: 100%;
     }
 
+    .integrantes h2 {
+        display: flex;
+        justify-content: center;
+        margin: 0%;
+    }
+
     .integrantes-container ul {
         width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .integrantes-container ul li {
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
     }
 }
 
-@media screen and (min-width: 481px) and (max-width: 980px) {
+@media screen and (min-width: 481px) and (max-width: 600px) {
     .integrantes {
         width: 100%;
-        padding-top: 20px;
+    }
+
+    .integrantes h2 {
+        display: flex;
+        justify-content: center;
+        margin: 0%;
+
     }
 
     .integrantes-container ul {
         width: 100%;
         height: auto;
-        display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .integrantes-container ul li {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    list-style: none;
-    }
-
-    .integrantes-container ul li img {
-        width: auto;
-        height: auto;
-        padding-left: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
+/* FIN SECCION INTEGRANTES PARA MOBILE */
 
 /* Fin estilo La Banda */
 
@@ -640,14 +660,12 @@ footer {
     }
 }
 
-@media screen and (min-width: 992px) {
-    .image-footer-redes {
-        transition: all 1.25s;
-    }
-    
-    .image-footer-redes:hover {
-        transform: scale(1.25);
-    }   
+.image-footer-redes {
+    transition: all 1.25s;
+}
+
+.image-footer-redes:hover {
+    transform: scale(1.25);
 }
 
 footer p {
