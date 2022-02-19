@@ -260,7 +260,6 @@ p {
 /* Estilo La Banda */
 
 .text-banda p {
-    width: 90%;
     text-align: justify;
     display: flex;
     justify-content: center;
@@ -281,19 +280,23 @@ p {
     padding: 10px;
 }
 
+.image2 {
+    margin: 100px 0;
+}
+
+/* INICIO IMAGENES DE LA BANDA PARA MOBILE*/
 @media screen and (min-width: 1200px) {
     .carrousel-banda {
         display: none;
     }
 }
 
-@media screen and (max-width: 1999px) {
+@media screen and (max-width: 1199px) {
     .section-img {
         display: none;
     }
 }
-
-
+/* FIN IMAGENES DE LA BANDA PARA MOBILE*/
 
 .integrantes {
     width: 100%;
