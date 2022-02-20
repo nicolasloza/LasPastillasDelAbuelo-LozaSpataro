@@ -451,11 +451,6 @@ p {
     height: auto;
     margin: 30px;
     padding: 15px;
-    transition: all 1.25s;
-}
-
-.discography-cd:hover {
-    transform: scale(1.25);
 }
 
 .container-cd {
@@ -525,10 +520,17 @@ h2 {
 
 /* INICIO SECCION DISCOGRAFIA DETALLADA PARA MOBILE */
 @media screen and (min-width: 992px){
+    .discography-cd {
+        transition: all 1.25s;
+    }
+    
+    .discography-cd:hover {
+        transform: scale(1.25);
+    }
+    
     .nombre-temas-mobile {
         display: none;
     }
-    
 }
 
 @media screen and (max-width: 991px) {
@@ -561,8 +563,6 @@ h2 {
     .nombre-temas-mobile li {
         margin-bottom: 8px;
     }
-
-
 }
 
 /* Fin estilo discografia*/
