@@ -523,6 +523,48 @@ h2 {
     border: 1px solid white;
 }
 
+/* INICIO SECCION DISCOGRAFIA DETALLADA PARA MOBILE */
+@media screen and (min-width: 992px){
+    .nombre-temas-mobile {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 991px) {
+    .tapa-cd, .spotify-cd, .nombre-temas-mobile, .video-discografia {
+        margin-bottom: 15px;
+    }
+
+    .temas-cd {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .h3-discografia {
+        margin-left: 0px;
+    }
+
+    .nombre-temas {
+        display: none;
+    }
+
+    .nombre-temas-mobile {
+        font-family: 'nunito';
+        color: white;
+        font-size: var(--size-text);
+        margin-left: 0%;
+    }
+
+    .nombre-temas-mobile li {
+        margin-bottom: 8px;
+    }
+
+
+}
+
 /* Fin estilo discografia*/
 
 
