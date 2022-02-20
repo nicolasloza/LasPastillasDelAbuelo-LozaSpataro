@@ -69,7 +69,7 @@ body {
 
 @media screen and (max-width: 480px) {
     .h1-index {
-        font-size: 22px;
+        font-size: 30px;
     }
 }
 
@@ -91,7 +91,7 @@ h2 {
 
 @media screen and (max-width: 480px) {
     h2 {
-        font-size: 20px;
+        font-size: 25px;
     }
 }
 
@@ -502,90 +502,104 @@ h2 {
 
 /*Estilos fechas */
 
-.article-fechas1 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr) ;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+h2{
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
 }
 
-.fechas1-img {
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-    grid-area: 1 / 1 / 2 / 2;
+.informacion-contianer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 }
 
-.fechas1-img2 {
-    width: 80%;
+.informacion-fecha {
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.informacion-fecha ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.informacion-fecha ul li {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.informacion-fecha ul li img  {
+    width: auto;
     height: auto;
-    margin: 20px;
-    grid-area: 1 / 2 / 3 / 3;
+    margin-right: 6px;
 }
 
-.fechas1-img2 h6 {
-    text-align: center;
-    font-family: 'nunito';
-    color: white;
-    font-size: 15px;
-    margin-bottom: 30px;
-}
-
-
-.fechas-information {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-.fechas-information ul li img  {
-    width: 24px;
-    height: auto;
-    margin-left: 20px;
-}
-
-.fechas-information ul li a {
+.informacion-fecha ul li a {
     text-decoration: none;
 }
 
-.fechas-information ul li strong {
+.informacion-fecha ul li strong {
     font-family: 'nunito';
-    font-size: 18px;
+    font-size: 20px;
     color: white;
 }
 
-.fechas-information iframe {
-    width: 20%;
-    height: auto;
-    margin: 20px;
+.maps-fecha {
+    width: auto;
+    height: 50%;
 }
 
-.article-fechas2 h3 {
+.poster-fecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descripcion-fecha {
+    width: 100%;
+    margin: 60px 0;
+
+}
+
+.descripcion-fecha h3 {
     font-family: 'lato';
     font-size: 28px;
     color: white;
     margin-left: 20px;
 }
 
-.article-fechas2 p {
-    width: auto;
-    display: flex;
-    flex-wrap: nowrap;
+.descripcion-fecha p {
+    text-align: justify;
 }
 
-.fechas-proximas {
-    width: 100%;
+.proximas-fechas h3 {
     font-family: 'nunito';
     color: white;
     font-size: 28px;
     text-align: center;
-    margin: 30px;
     border: 1px solid white;
     padding: 20px;
+    margin: 30px;
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
 }
 
+/* INICIO SECCION FECHA PARA MOBILE */
+@media screen and (max-width: 1199px) {
+    .poster-fecha {
+        display: none;
+    }
+}
+/* FIN SECCION FECHA PARA MOBILE */
 /*Fin estilo fechas*/
 
 
