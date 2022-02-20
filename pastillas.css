@@ -137,12 +137,19 @@ p {
 
 .li-header {
     padding: 0 30px;
-    transition: all 1.25s;
 }
 
-.li-header:hover {
-    transform: scale(1.25);
+/* INICIO ANIMACIONES DE HEADER PARA DESKTOP */
+@media screen and (min-width: 992px){
+    .li-header {
+        transition: all 1.25s;
+    }
+    
+    .li-header:hover {
+        transform: scale(1.25);
+    }
 }
+/*FIN ANIMACIONES DE HEADER PARA DESKTOP*/
 
 .li-header a {
     font-family: 'Nunito Sans', sans-serif;
@@ -251,7 +258,6 @@ p {
         border-radius: 12px;
     }
 }
-
 /* FIN MUSICA PARA MOBILE*/
 
 /* Fin estilos Index*/
@@ -534,6 +540,10 @@ h2 {
 }
 
 @media screen and (max-width: 991px) {
+    .nav-discography ul {
+        padding-left: 0;
+    }
+    
     .tapa-cd, .spotify-cd, .nombre-temas-mobile, .video-discografia {
         margin-bottom: 15px;
     }
