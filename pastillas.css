@@ -409,7 +409,6 @@ p {
         display: flex;
         justify-content: center;
         margin: 0%;
-
     }
 
     .integrantes-container ul {
@@ -574,6 +573,7 @@ h2 {
         margin-bottom: 8px;
     }
 }
+/* FIN SECCION DISCOGRAFIA DETALLADA PARA MOBILE */
 
 /* Fin estilo discografia*/
 
@@ -726,13 +726,18 @@ footer {
     }
 }
 
-.image-footer-redes {
-    transition: all 1.25s;
-}
 
-.image-footer-redes:hover {
-    transform: scale(1.25);
+/* INICIO ANIMACIONES DE FOOTER PARA DESKTOP */
+@media screen and (min-width: 992px){
+    .image-footer-redes {
+        transition: all 1.25s;
+    }
+    
+    .image-footer-redes:hover {
+        transform: scale(1.25);
+    }
 }
+/*FIN ANIMACIONES DE FOOTER PARA DESKTOP*/
 
 footer p {
     font-family: 'Nunito Sans', sans-serif;
