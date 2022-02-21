@@ -1,0 +1,70 @@
+@import '../base/listas';
+@import '../base/maps';
+
+/* HEADER */
+header {
+    width: 100%;
+    .nav-header {
+        background-color: map-get($header, bg-header);
+        margin: 0%;
+        padding: 0%;
+        div {
+            a {
+                .logo-inicio {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: nowrap;
+
+                }
+            }
+            div {
+                ul {
+                    .li-header {
+                        padding: 0 30px;             
+
+                        a {
+                            font-family: 'Nunito Sans', sans-serif;
+                            color: rgb(172, 172, 172);
+                            font-size: nth($size, 1);
+                        }
+
+                        ul {
+                            .li-fechas{
+                                a {
+                                    font-family: 'Nunito Sans', sans-serif;
+                                    color: rgb(0, 9, 27);
+                                    font-size: nth($size, 2);                                   
+                                }
+                            }
+                        }
+                        
+                    }
+
+                    @media screen and (min-width: 992px){
+                        /* ANIMACIONES DE HEADER PARA DESKTOP */
+                        .li-header {
+                            transition: all 1.25s;
+                        }
+                        
+                        .li-header:hover {
+                            transform: scale(1.25);
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    .img-header {
+        width: 100%;
+        height: auto;
+        border-top: 4px solid rgb(172, 172, 172);
+        border-bottom: 4px solid rgb(172, 172, 172);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+}
+/* FIN HEADER */
