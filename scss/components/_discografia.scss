@@ -1,0 +1,159 @@
+@import '../base/listas';
+@import '../base/extends';
+
+/* DISCOGRAFIA */
+section {
+    .nav-discography {
+        ul {
+            width: 100%;
+            @extend %display-center;
+            flex-wrap: wrap;
+
+            .li-discography-cd {
+                display: inline-block;
+                flex-wrap: wrap;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+
+                    .discography-cd {
+                        width: 250px;
+                        height: auto;
+                        margin: 30px;
+                        padding: 15px;
+
+                        @media screen and (min-width: 992px) {
+                            transition: all 1.25s;
+
+                            &:hover {
+                                transform: scale(1.25);
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 991px) {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.container-cd {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    div {
+
+        div {
+
+            h2 {
+                display: flex;
+                justify-content: center;
+                margin: 30px;
+            }
+        }
+
+        .tapa-cd {
+            @extend %display-center;
+
+            img {
+                width: 70%;
+                height: auto;
+            }
+
+            @media screen and (max-width: 991px) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .spotify-cd {
+            @extend %display-center;
+
+            @media screen and (max-width: 991px) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .temas-cd {
+
+            .h3-discografia {
+                font-family: nth($fonts, 1);
+                color: nth($colors, 2);
+                font-size: 20px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-left: 80px;
+                display: flex;
+                justify-content: flex-start;
+
+                @media screen and (max-width: 991px) {
+                    margin-left: 0px;
+                }
+            }
+
+            .nombre-temas {
+                font-family: nth($fonts, 1);
+                color: nth($colors, 2);
+                font-size: 18px;
+                margin-left: 80px;
+
+                li {
+                    margin-top: 3px;
+                }
+
+                @media screen and (max-width: 991px) {
+                    display: none;
+                }
+            }
+
+            .nombre-temas-mobile {
+
+                li {
+                    @media screen and (max-width: 991px) {
+                        margin-bottom: 8px;
+                    }
+                }
+
+                @media screen and (min-width: 992px) {
+                    display: none;
+                }
+
+                @media screen and (max-width: 991px) {
+                    font-family: nth($fonts, 1);
+                    color: nth($colors, 2);
+                    font-size: 18px;
+                    margin-left: 0%;
+                    margin-bottom: 15px;
+                }
+            }
+
+            @media screen and (max-width: 991px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+        }
+
+        .video-discografia {
+            @extend %display-center;
+
+            video {
+                width: 75%;
+                padding: 10px;
+                border: 1px solid white;
+            }
+
+            @media screen and (max-width: 991px) {
+                margin-bottom: 15px;
+            }
+        }
+    }   
+    
+}
+/* FIN DISCOGRAFIA */

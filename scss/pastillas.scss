@@ -3,6 +3,28 @@
     padding: 0;
 }
 
-@import 'base/font-family';
+/* FONTS */
+@font-face {
+    font-family: 'clarendon-bold';
+    src: url('../fonts/Clarendon-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'lato';
+    src: url('../fonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'nunito';
+    src: url('../fonts/Nunito-VariableFont_wght.ttf');
+}
+
 @import 'components/header';
+@import 'components/body';
+@import 'components/index';
+@import 'components/banda';
+@import 'components/discografia';
+@import 'components/fechas';
+@import 'components/footer';
+
 

@@ -1,0 +1,133 @@
+@import '../base/listas';
+@import '../base/extends';
+
+
+/* LA BANDA */
+.section-banda {
+    width: 100%;
+    article {
+        .text-banda {
+            p {
+                text-align: justify;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .section-img {
+            ul {
+                list-style: none;
+                li {
+                    .banda-image {
+                        width: 400px;
+                        height: auto;
+                        margin-left: 10px;
+                        padding: 10px;
+                    }
+
+                    .image2 {
+                        margin: 100px 0;
+                    }
+                }
+            }
+            @media screen and (max-width: 1199px) {
+                display: none;
+            }
+        }
+
+        .carrousel-banda {
+            @media screen and (min-width: 1200px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.integrantes {
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    h2 {
+        @media screen and (max-width: 480px) {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        @media screen and (min-width: 481px) and (max-width: 600px) {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+    }
+
+    .integrantes-container {
+        width: 100%;
+
+        ul {
+            width: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            li {
+                list-style: none;
+                text-align: center;
+                
+                .image-integrantes {
+                    width: 150px;
+                    height: auto;
+                    margin-top: 30px 0;
+                }
+
+                a {
+                    text-decoration: none;
+                    @extend %display-center;
+                    flex-wrap: wrap;
+
+                    p {
+                        width: 100%;
+                        font-family: nth($fonts, 1);
+                        color: nth($colors, 2);
+                        font-size: 15px;
+                        text-align: center;
+                        margin-top: 15px;
+                        padding: 0%;
+                    }
+                }
+
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+
+            @media screen and (min-width: 481px) and (max-width: 600px) {
+                width: 100%;
+                height: auto;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+    }
+}
+/* FIN LA BANDA */

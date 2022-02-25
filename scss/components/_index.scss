@@ -1,0 +1,74 @@
+@import '../base/listas';
+@import '../base/extends';
+
+/* INDEX */
+
+.musica-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    article {
+        .banner-musica{
+            width: 100%;
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+            img {
+                @extend %display-center;
+            }
+
+            @media screen and (max-width: 769px) { 
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 5px;
+            }
+        }
+
+        .spotify-index {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            @extend %display-center;
+            transition: all 1.25s;
+
+            &:hover {
+                transform: scale(1.10);
+            }
+        }
+
+        .discografia-index {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            @extend %display-center;
+            transition: all 1.25s;
+
+            &:hover {
+                transform: scale(1.10);
+            }
+
+            @media screen and (max-width: 769px) {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            a {
+                @media screen and (max-width: 769px) {
+                    display: flex;
+                    justify-content: center;
+                }
+                img {
+                    width: auto;
+                    height: auto;
+                    border-radius: 12px;
+
+                    @media screen and (max-width: 769px) {
+                        width: 75%;
+                        height: auto;
+                        border-radius: 12px;
+                    }
+                }
+            }                              
+        }
+    }
+}
+
+/* FIN INDEX */

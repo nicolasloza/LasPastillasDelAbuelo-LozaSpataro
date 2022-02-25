@@ -1,0 +1,55 @@
+@import '../base/listas';
+@import '../base/extends';
+
+/* BODY */
+body {
+    background-color: nth($colors, 4);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .h1-index {
+        font-family: nth($fonts, 2);
+        text-align: center;
+        font-size: 60px;
+        color: nth($colors, 2);
+        margin: 20px 0;
+        padding: 20px;
+        @extend %display-center;
+        flex-wrap: nowrap;
+
+        @media screen and (max-width: 480px) {
+            font-size: 30px;
+        }
+        
+        @media screen and (min-width: 481px) and (max-width: 1100px) {
+            font-size: 40px;
+        }
+    }
+    
+
+    h2 {
+        font-family: nth($fonts, 3);
+        text-align: center;
+        font-size: 35px;
+        color: nth($colors, 2);
+        margin: 30px 0;
+        
+        @media screen and (max-width: 480px) {
+            font-size: 28px;
+        }
+    }
+            
+    p {
+        font-family: nth($fonts, 1);
+        color: nth($colors, 3);
+        font-size: 18px;
+        text-align: justify;
+        margin: 15px;
+        padding: 5px;
+        @extend %display-center;
+        flex-wrap: wrap;
+    }
+}
+
+/* FIN BODY */

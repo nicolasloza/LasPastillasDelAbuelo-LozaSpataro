@@ -1,0 +1,119 @@
+@import '../base/listas';
+@import '../base/extends';
+
+/* FECHAS */
+.fecha-container {
+    article {
+        .titulo-fecha {
+            h2 {
+                margin: 0;
+                padding: 10px 0;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .informacion-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+
+            .miniatura-fecha {
+
+                .fechas1-img {
+
+                }
+            }
+
+            .informacion-fecha {
+                width: auto;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 10px 0;
+
+                    li {
+                        padding: 5px 0;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: auto;
+                            height: auto;
+                            margin-right: 6px;
+                        } 
+
+                        a {
+                            text-decoration: none;
+
+                            img {
+                                width: auto;
+                                height: auto;
+                                margin-right: 6px;
+                            }
+                        }
+
+                        strong{ 
+                            font-family: nth($fonts, 1);
+                            font-size: 20px;
+                            color: nth($colors, 2);
+                        }
+                    }
+                }
+
+                .maps-fecha {
+                    width: auto;
+                    height: 50%;
+                }
+            }
+        }
+
+        .poster-fecha {
+            @extend %display-center;
+            
+            .fechas1-img2 {
+                @media screen and (max-width: 1199px) {
+                    display: none;
+                }
+            }
+            
+        }
+
+        .descripcion-fecha {
+            width: 100%;
+            margin: 60px 0;
+
+            h3 {
+                font-family: nth($fonts, 3);
+                font-size: 28px;
+                color: nth($colors, 2);
+                margin-left: 20px;
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+    }
+}
+
+.proximas-fechas {
+    h3 {
+        font-family: nth($fonts, 1);
+        color: nth($colors, 2);
+        font-size: 28px;
+        text-align: center;
+        border: 1px solid white;
+        padding: 20px;
+        margin: 30px;
+        @extend %display-center
+    }
+}
+/* FIN FECHAS */

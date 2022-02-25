@@ -1,11 +1,11 @@
 @import '../base/listas';
-@import '../base/maps';
+@import '../base/extends';
 
 /* HEADER */
 header {
     width: 100%;
     .nav-header {
-        background-color: map-get($header, bg-header);
+        background-color: nth($colors, 1);
         margin: 0%;
         padding: 0%;
         div {
@@ -14,43 +14,29 @@ header {
                     width: 100%;
                     display: flex;
                     flex-wrap: nowrap;
-
                 }
             }
-            div {
+            .div-nav {
                 ul {
                     .li-header {
-                        padding: 0 30px;             
+                        padding: 0 30px;           
 
                         a {
-                            font-family: 'Nunito Sans', sans-serif;
-                            color: rgb(172, 172, 172);
-                            font-size: nth($size, 1);
+                            font-family: nth($fonts, 1);
+                            color: nth($colors, 3);
+                            font-size: 20px;
                         }
 
                         ul {
                             .li-fechas{
                                 a {
-                                    font-family: 'Nunito Sans', sans-serif;
-                                    color: rgb(0, 9, 27);
-                                    font-size: nth($size, 2);                                   
+                                    font-family: nth($fonts, 1);
+                                    color: nth($colors, 3);
+                                    font-size: 18px;                                 
                                 }
                             }
                         }
-                        
-                    }
-
-                    @media screen and (min-width: 992px){
-                        /* ANIMACIONES DE HEADER PARA DESKTOP */
-                        .li-header {
-                            transition: all 1.25s;
-                        }
-                        
-                        .li-header:hover {
-                            transform: scale(1.25);
-                        }
-                    }
-                    
+                    }             
                 }
             }
         }
@@ -59,11 +45,9 @@ header {
     .img-header {
         width: 100%;
         height: auto;
-        border-top: 4px solid rgb(172, 172, 172);
-        border-bottom: 4px solid rgb(172, 172, 172);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        border-top: 4px solid nth($colors, 3);
+        border-bottom: 4px solid nth($colors, 3);
+        @extend %display-center;
         flex-wrap: nowrap;
     }
 }

@@ -1,0 +1,62 @@
+@import '../base/listas';
+@import '../base/extends';
+
+/* FOOTER */
+footer {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 50%);
+
+    .image-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            text-decoration: none;
+            padding-top: 15px;
+            padding-right: 10px;
+            padding-left: 10px;
+
+            .image-footer-redes {
+                @extend %display-center;
+
+                @media screen and (min-width: 992px){
+                    transition: all 1.25s;
+
+                    &:hover {
+                        transform: scale(1.25);
+                    }
+                }
+
+            }
+        }
+
+        @media screen and (max-width: 980px) {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+
+    p {
+        font-family: nth($fonts, 1);
+        color: nth($colors, 3);
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+
+        @media screen and (max-width: 480px) {
+            width: 90%;
+            height: auto;
+            text-align: center;
+        }
+    }
+}
+/* FIN FOOTER */
