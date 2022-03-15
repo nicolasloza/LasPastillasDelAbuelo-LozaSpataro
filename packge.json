@@ -1,0 +1,19 @@
+{
+    "name": "carpeta-de-proyecto",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/nicolasloza/LasPastillasDelAbuelo-LozaSpataro.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/nicolasloza/LasPastillasDelAbuelo-LozaSpataro/issues"
+    },
+    "homepage": "https://github.com/nicolasloza/LasPastillasDelAbuelo-LozaSpataro#readme",
+    "description": ""
+}
